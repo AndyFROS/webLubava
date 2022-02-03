@@ -1,0 +1,10 @@
+# blog/urls.py
+from django.urls import path
+ 
+from .views import BlogListView, BlogDetailView # новое изменение
+#from .views import index # новое изменение
+
+urlpatterns = [
+    path('post/<int:pk>/', BlogDetailView.as_view(), name='post_detail'), # новое изменение
+    path('', BlogListView.as_view(), name='base'),
+]

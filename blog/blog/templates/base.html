@@ -1,0 +1,32 @@
+<!-- templates/base.html -->
+{% load static %}
+<html>
+  <head>
+    <title>Django blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Business website">
+    <meta name="keywords" content="business, website">
+  </head>
+  
+  <body>
+    <div id="page">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top">
+          <td width="272" id="left-column"><div><img src="{% static 'images/imgl01.gif' %}" alt=""></div>
+            <a href="/">
+            <div id="logo"><img src="{% static 'images/logo.gif' %}" alt=""><div id="company_name">History of Russia</div></div>
+            </a>
+
+    <div>
+      {% block content %}
+      {% endblock content %}
+    </div>
+
+    </div>
+  </body>
+</html>

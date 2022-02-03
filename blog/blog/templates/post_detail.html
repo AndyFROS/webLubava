@@ -1,0 +1,48 @@
+<!-- templates/post_detail.html -->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+      <ul id="menu">
+        {% for post in latest %}
+          <li>
+            <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+          </li>
+      {% endfor %}
+      </ul>
+   
+            
+        <div id="news-bg">
+          <div id="news">
+            <p>Чтоб Россия пошла по дороге прогресса,
+              <br>Обязательно все мы сегодня должны
+              <br>Знать прекрасно историю нашей страны
+               <br>И уметь постоять за свои интересы! <br>
+  
+               <br>Нужно правду от лжи отличать научиться,е
+               <br>За Отчизну активно бороться всегда -
+               <br>Я уверен: Россия сумеет тогда
+               <br>От пороков тяжёлых своих излечиться.</p>
+        <td width="498">
+        <div id="t-menu">
+
+      <ul>
+      <li><a href="/">home</a></li>
+      <li><a href="mailto:Lubava.51@mail.ru">email us</a></li>
+      </ul>
+      <br clear="all">
+      </div>
+
+
+  <div class="post-entry" style="margin-left: 30px;">
+    <h2 style="margin-top: 40px;">{{ post.title | safe}}</h2>
+    <p">{{ post.body | safe}}</p>
+  </div>
+
+ 
+  <div id="footer">
+    <div id="bottom_menu"><a href="/">Home Page</a>  |  <a href="#">About Us</a>  |  <a href="#">Our Clients</a>  |  <a href="#">Testimonials</a>  |  <a href="#">Price List</a>  |  <a href="#">Contact Details</a></div>
+  </div>
+
+{% endblock content %}
