@@ -1,4 +1,3 @@
-from turtle import title
 from django.shortcuts import render
 # Create your views here.
 # blog/views.py
